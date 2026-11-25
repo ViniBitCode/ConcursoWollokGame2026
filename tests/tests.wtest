@@ -1,0 +1,41 @@
+import source.fases.Fase1.reloj.*
+import source.personajes.jugador.*
+import source.refugio.refugio.*
+import source.fases.Fase2.evento.*
+import source.fases.Fase2.eventosManager.*
+import source.items.item.*
+import source.utilsconfig.config.*
+
+describe "Tests" {
+
+  test "Ted esta fuera de rango del refugio al agotarse el tiempo" {
+    jugador.position(game.at(0, 0))
+    assert.notThat(refugio.estaCerca(jugador))
+  }
+
+  test "Se supera el evento estasSecoComoLenguaDeLoro si se cuenta con agua" {
+    refugio.reiniciar()
+    refugio.guardar([agua])
+    // Devuelve id_evento_ganaste (0) si se salva
+    assert.equals(0, estasSecoComoLenguaDeLoro.efecto())
+  }
+
+  test "Se pierde el evento estasSecoComoLenguaDeLoro si no se cuenta con agua" {
+    refugio.reiniciar()
+    // Devuelve id_evento_perdiste (1) si no tiene el item
+    assert.equals(1, estasSecoComoLenguaDeLoro.efecto())
+  }
+
+  test "Se supera el evento invasionDeFaunaAustraliana si se cuenta con libro aunque no tenga insecticida" {
+    refugio.reiniciar()
+    refugio.guardar([libro])
+    // Se salva por opcion alternativa del combo
+    assert.equals(0, invasionDeFaunaAustraliana.efecto())
+  }
+
+  test "Se supera el evento de cierre rescateDeGendarmeria si se cuenta con la radio y el mapa" {
+    refugio.reiniciar()
+    refugio.guardar([radio, mapa])
+    assert.equals(12, rescateDeGendarmeria.efecto())
+  }
+}

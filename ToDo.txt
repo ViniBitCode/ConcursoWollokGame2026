@@ -1,0 +1,43 @@
+Vini - Cabo:
+. Poner sonidos faltantes:
+    - Fase 1: Musica de Fondo
+    - Fase 2: Musica de Fondo - Musica de transicion
+
+. Libreta Central:
+    - Agregar la hoja 2: Mostrar los objetos que hay dentro del bunker
+    - Agregar la hoja 3: Mostrar el estado de los personajes dentro del bunker
+
+Hechos: 
+
+. Poner sonidos faltantes:
+    - Fase 1: Efecto al no poder agarrar objeto - Efecto al agarrar objeto?
+    - Fase 2: Efecto al pasar la hoja
+
+. Refactorizar la generacion del mapa en la fase 1:
+    - Cambiar la manera en la que se generan los tiles (revisar el ds)
+    - Que los items aparezcan de manera aleatoria
+    - Cambiar los assets de las celdas por unas mas apropiadas
+
+. Libreta Central:
+    - Agregar flechas para ir izquierda y derecha
+
+. Hacer que se pueda reiniciar todo el juego
+
+==========================================================================================================================================================================================
+
+Nico - Nahue: 
+
+agrego:
+quizás podríamos elegir si jugar como ted o como dolores, ya está el codigo
+que crea los personajes en funcion de con quien jugas
+
+agrego finales extras para futuras entregas:
+agregar a sharikov para el final de dominacion felina
+
+agregar el final de hombres de negro que se obtiene si tenes a sharikov y saliste a explorar al menos una vez
+
+agregar a pankcake para el final de mente fria y panzer
+
+billete solo de ida -> final cuando mueren los dos padres y los hijos sobreviven (habria que ver si un personaje puede morir)
+
+al suelo -> está hecho, es el final que se obtiene cuando no llegas al bunker

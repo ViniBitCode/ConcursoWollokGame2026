@@ -1,0 +1,70 @@
+import source.refugio.refugio.*
+import source.personajes.jugador.*
+import wollok.game.*
+import source.*
+import source.items.item.*
+import source.fases.Fase1.reloj.*
+
+describe "Tests: "{
+
+  test "El jugador no puede atravesar objetos no atravesables"{
+
+    jugador.position(game.at(refugio.position().x(), refugio.position().y() - 1))
+    const posicionInicial = jugador.position()
+    
+    jugador.arriba()
+
+    assert.equals(posicionInicial, jugador.position())
+  }
+
+  test "El jugador solo puede agarrar un objeto si tiene espacio en el inventario: "{
+    const mjolnir = new Item(nombre = "Mjolnir", peso = 5, sprite = "")
+    assert.notThat(jugador.leEntra(mjolnir))
+  }
+  
+  test "El jugador inicia la partida sin objetos en el inventario"{
+    assert.notThat(jugador.tieneObjetos())
+  }
+
+  test "El jugador vacía su inventario al soltar mirando al refugio" {
+    jugador.agarrarItem(new Item(nombre = "SOPA", peso = 1, sprite = "items/sopa.png"))
+    jugador.position(game.at(refugio.position().x() - 1, refugio.position().y()))
+    jugador.direccionMirada(derecha)
+
+    jugador.soltar()
+
+    assert.notThat(jugador.tieneObjetos())
+  }
+
+  test "El jugador pierde la partida si está lejos del refugio al terminar el tiempo"{
+    reloj.contador(6)
+
+    assert.that(reloj.contador() == 6 and !refugio.estaCerca(jugador))
+  }
+
+  test "El jugador no puede agarrar objetos durante la fase de exploración inicial." {
+     assert.notThat(jugador.puedeAgarrar())
+  }
+
+  test "El jugador puede agarrar objetos en la fase de recolección"{
+    reloj.cambiarSprite()
+    assert.that(jugador.puedeAgarrar())
+  }
+
+
+  test "El jugador gana la partida si está cerca del refugio al terminar el tiempo y sobrevive a los eventos de la fase de supervivencia"{
+  
+    const sopasMinimasVictoria = 3
+    sopasMinimasVictoria.times({_ => jugador.agarrarItem(new Item(nombre = "SOPA", peso = 1, sprite = "items/sopa.png")) })
+    
+    jugador.position(game.at(refugio.position().x(), refugio.position().y() - 1))
+    jugador.direccionMirada(arriba)
+    reloj.contador(6)
+
+    refugio.puedeEntrar(jugador)
+
+    assert.that(
+      refugio.tiene("SOPA", 3) 
+    )
+  }
+}
