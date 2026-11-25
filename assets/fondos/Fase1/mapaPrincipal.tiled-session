@@ -1,0 +1,117 @@
+{
+    "activeFile": "TiledStuff/MapaTiled.tmx",
+    "expandedProjectPaths": [
+        "TiledStuff",
+        "."
+    ],
+    "fileStates": {
+        "C:/Users/facun/OneDrive/Escritorio/fondoMapaPrincipal.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 738,
+                "y": 480
+            }
+        },
+        "Mapa.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "MapaEnTiled.tmx": {
+            "scale": 0.7929333333333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 639.3980158062889,
+                "y": 180.3430300992097
+            }
+        },
+        "Pared.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TiledStuff/FondoMapa.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TiledStuff/Mapa.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TiledStuff/MapaEnTiled.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 672,
+                "y": 297.33333333333337
+            }
+        },
+        "TiledStuff/MapaTiled.tmx": {
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 518.5,
+                "y": 326
+            }
+        },
+        "TiledStuff/Pared.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TiledStuff/PrimerCapa.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 0.33,
+            "scaleInEditor": 1
+        },
+        "TiledStuff/TilesMapa.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TiledStuff/sueloCasa.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TilesMapa.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "sueloCasa.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.externalTilesetPath": "G:/Facultad/2do_Anio/Paradigmas_de_Programacion/Practicos/Wollok-(Paradigma-Objetos)/Juegos/2026-o-tpGame-elEje/assets/fondos/Fase1/TiledStuff",
+    "last.imagePath": "G:/Facultad/2do_Anio/Paradigmas_de_Programacion/Practicos/Wollok-(Paradigma-Objetos)/Juegos/2026-o-tpGame-elEje/assets/fondos/Fase1",
+    "map.height": 16,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 50,
+    "map.tileWidth": 50,
+    "openFiles": [
+        "TiledStuff/MapaTiled.tmx",
+        "TiledStuff/PrimerCapa.tsx",
+        "TiledStuff/FondoMapa.tsx"
+    ],
+    "project": "mapaPrincipal.tiled-project",
+    "recentFiles": [
+        "TiledStuff/FondoMapa.tsx",
+        "TiledStuff/PrimerCapa.tsx",
+        "TiledStuff/MapaTiled.tmx",
+        "TiledStuff/Pared.tsx",
+        "TiledStuff/sueloCasa.tsx",
+        "TiledStuff/TilesMapa.tsx",
+        "TiledStuff/Mapa.tsx",
+        "TiledStuff/MapaEnTiled.tmx",
+        "TilesMapa.tsx",
+        "MapaEnTiled.tmx",
+        "Mapa.tsx",
+        "sueloCasa.tsx"
+    ],
+    "tileset.lastUsedFilter": "Archivos de conjuntos de patrones Tiled (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 1
+}
